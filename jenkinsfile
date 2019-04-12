@@ -17,6 +17,7 @@ pipeline {
                             withEnv(["PATH+NODE=${tool name: 'node-10.5.0', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'}/bin"]) {
                                 sh 'npm install'
                                 sh 'npm test'
+                                nodejs app.js
                             }
                                
                         }
